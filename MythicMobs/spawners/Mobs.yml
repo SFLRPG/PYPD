@@ -1,0 +1,19 @@
+MyFirstBoss:
+  Type: ZOMBIE
+  Display: "&c恐怖殭屍"
+  Health: 100
+  Damage: 10
+  Armor: 5
+  Skills:
+    - skill{s=fireball} @target ~onAttack
+  Drops:
+    - diamond 1 100%
+  AIGoalSelectors:
+    clear: true
+    - 0 clear
+    - 1 meleeattack
+GIANT:
+  Type: GIANT
+  Display: "&6巨人"
+  Health: 1000
+  Damage: 20

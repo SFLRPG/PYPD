@@ -1,0 +1,13 @@
+# 測試用的範例殭屍
+
+TestZombie:
+  類型: ZOMBIE
+  顯示名稱: '&a測試殭屍'
+  生命值: 20
+  傷害: 5
+  技能:
+    - 'message{m=這是一個測試怪物！} @PlayersInRadius{r=10} ~onSpawn'
+  選項:
+    移動速度: 0.25
+  掉落:
+    - ROTTEN_FLESH 1 1.0

@@ -1,0 +1,429 @@
+################################################################
+#
+# 固定屬性設定
+#
+################################################################
+
+ATTACK_DAMAGE:
+  Enabled: false
+  AlwaysActive: false
+  Display: '傷害'
+  Formatting:
+    Additive: '+<value> 傷害'
+    Multiply: '+<value> 傷害'
+    Compound: 'x<value> 傷害'
+  BaseValue: 100
+
+ATTACK_SPEED:
+  Enabled: false
+  Display: '攻擊速度'
+  Formatting:
+    Additive: '+<value> 攻擊速度'
+    Multiply: '+<value> 攻擊速度'
+    Compound: 'x<value> 攻擊速度'
+  BaseValue: 4.0
+
+BONUS_DAMAGE:
+  Enabled: false
+  Display: '額外傷害'
+  Formatting:
+    Additive: '+<value> 額外傷害'
+    Multiply: '+<value> 額外傷害'
+    Compound: 'x<value> 額外傷害'
+  BaseValue: 0
+
+CRITICAL_STRIKE_CHANCE:
+  Enabled: false
+  Display: '爆擊機率'
+  Formatting:
+    Additive: '+<value> 爆擊機率'
+    Multiply: '+<value> 爆擊機率'
+    Compound: 'x<value> 爆擊機率'
+  BaseValue: 0
+  MinValue: 0
+  Skills:
+    - particles{p=crit;a=50;hS=1;y=1;s=1} @trigger
+
+CRITICAL_STRIKE_DAMAGE:
+  Enabled: false
+  Display: '爆擊傷害'
+  Formatting:
+    Additive: '+<value> 爆擊傷害'
+    Multiply: '+<value> 爆擊傷害'
+    Compound: 'x<value> 爆擊傷害'
+  BaseValue: 1
+
+CRITICAL_STRIKE_RESILIENCE:
+  Enabled: false
+  Display: '爆擊抗性'
+  Formatting:
+    Additive: '+<value> 爆擊抗性'
+    Multiply: '+<value> 爆擊抗性'
+    Compound: 'x<value> 爆擊抗性'
+  BaseValue: 0
+
+DAMAGE_REDUCTION:
+  Enabled: false
+  Display: '傷害減免'
+  Formatting:
+    Additive: '+<value> 傷害減免'
+    Multiply: '+<value> 傷害減免'
+    Compound: 'x<value> 傷害減免'
+  BaseValue: 0
+
+DEFENSE:
+  Enabled: false
+  Display: '防禦力'
+  Formatting:
+    Additive: '+<value> 防禦力'
+    Multiply: '+<value> 防禦力'
+    Compound: 'x<value> 防禦力'
+  BaseValue: 0
+
+DODGE_CHANCE:
+  Enabled: false
+  Display: '閃避機率'
+  Formatting:
+    Additive: '+<value> 閃避機率'
+    Multiply: '+<value> 閃避機率'
+    Compound: 'x<value> 閃避機率'
+  BaseValue: 0
+
+DODGE_NEGATION:
+  Enabled: false
+  Display: '命中率'
+  Formatting:
+    Additive: '+<value> 命中率'
+    Multiply: '+<value> 命中率'
+    Compound: 'x<value> 命中率'
+  BaseValue: 0
+
+HEALTH:
+  Enabled: false
+  Display: '生命值'
+  Formatting:
+    Additive: '+<value> 生命'
+    Multiply: '+<value> 生命'
+    Compound: 'x<value> 生命'
+  BaseValue: 20
+  MinValue: 1
+
+HEALTH_REGENERATION:
+  Enabled: false
+  Display: '生命恢復'
+  Formatting:
+    Additive: '+<value> 回復'
+    Multiply: '+<value> 回復'
+    Compound: 'x<value> 回復'
+  BaseValue: 0
+  MaxValue: 1000000
+  MinValue: 0
+  Frequency: 60
+
+LIFESTEAL_CHANCE:
+  Enabled: false
+  Display: '吸血機率'
+  Formatting:
+    Additive: '+<value> 吸血機率'
+    Multiply: '+<value> 吸血機率'
+    Compound: 'x<value> 吸血機率'
+  BaseValue: 0
+
+LIFESTEAL_POWER:
+  Enabled: true
+  Display: '吸血強度'
+  Formatting:
+    Additive: '+<value> 吸血強度'
+    Multiply: '+<value> 吸血強度'
+    Compound: 'x<value> 吸血強度'
+  BaseValue: 0.1
+
+MOVEMENT_SPEED:
+  Enabled: false
+  Display: '移動速度'
+  Formatting:
+    Additive: '+<value> 移動速度'
+    Multiply: '+<value>% 移動速度'
+    Compound: 'x<value>% 移動速度'
+  ParentStats:
+    - SPEED
+  Formula: '0.2 + (0.2 / (1 + e^(-0.005 * (SPD - 1000))))'
+
+PARRY_CHANCE:
+  Enabled: false
+  Display: '格擋機率'
+  BaseValue: 0
+  Priority: 0
+  Formatting:
+    Additive: '+<value> 格擋機率'
+    Multiply: '+<value> 格擋機率'
+    Compound: 'x<value> 格擋機率'
+  FrontAngle: 180
+  UsableMaterials:
+    - WOODEN_SWORD
+    - STONE_SWORD
+    - GOLDEN_SWORD
+    - IRON_SWORD
+    - DIAMOND_SWORD
+    - NETHERITE_SWORD
+  Skills: []
+
+PARRY_NEGATION:
+  Enabled: false
+  Display: '專精'
+  Formatting:
+    Additive: '+<value> 專精'
+    Multiply: '+<value> 專精'
+    Compound: 'x<value> 專精'
+  BaseValue: 0
+
+PARRY_POWER:
+  Enabled: false
+  Display: '格擋強度'
+  BaseValue: 0.5
+  Formatting:
+    Additive: '+<value> 格擋強度'
+    Multiply: '+<value> 格擋強度'
+    Compound: 'x<value> 格擋強度'
+
+PARRY_COUNTERATTACK:
+  Enabled: false
+  Display: '格擋反擊'
+  BaseValue: 1
+  Formatting:
+    Additive: '+<value> 格擋反擊'
+    Multiply: '+<value> 格擋反擊'
+    Compound: 'x<value> 格擋反擊'
+
+ARMOR:
+  Enabled: false
+  Display: '護甲'
+  Formatting:
+    Additive: '+<value> 護甲'
+    Multiply: '+<value> 護甲'
+    Compound: 'x<value> 護甲'
+  BaseValue: 0
+
+ARMOR_TOUGHNESS:
+  Enabled: false
+  Display: '護甲韌性'
+  Formatting:
+    Additive: '+<value> 護甲韌性'
+    Multiply: '+<value> 護甲韌性'
+    Compound: 'x<value> 護甲韌性'
+  BaseValue: 0
+
+BURNING_TIME:
+  Enabled: false
+  Display: '燃燒時間'
+  Formatting:
+    Additive: '+<value> 燃燒時間'
+    Multiply: '+<value> 燃燒時間'
+    Compound: 'x<value> 燃燒時間'
+  BaseValue: 0
+
+EXPLOSION_KNOCKBACK_RESISTANCE:
+  Enabled: false
+  Display: '爆炸擊退抗性'
+  Formatting:
+    Additive: '+<value> 爆炸擊退抗性'
+    Multiply: '+<value> 爆炸擊退抗性'
+    Compound: 'x<value> 爆炸擊退抗性'
+  BaseValue: 0
+
+FALL_DAMAGE_MULTIPLIER:
+  Enabled: false
+  Display: '摔落傷害倍率'
+  Formatting:
+    Additive: '+<value> 摔落傷害倍率'
+    Multiply: '+<value> 摔落傷害倍率'
+    Compound: 'x<value> 摔落傷害倍率'
+  BaseValue: 1
+
+GRAVITY:
+  Enabled: false
+  Display: '重力'
+  Formatting:
+    Additive: '+<value> 重力'
+    Multiply: '+<value> 重力'
+    Compound: 'x<value> 重力'
+  BaseValue: 0
+
+JUMP_STRENGTH:
+  Enabled: false
+  Display: '跳躍力'
+  Formatting:
+    Additive: '+<value> 跳躍力'
+    Multiply: '+<value> 跳躍力'
+    Compound: 'x<value> 跳躍力'
+  BaseValue: 0
+
+KNOCKBACK_RESISTANCE:
+  Enabled: false
+  Display: '擊退抗性'
+  Formatting:
+    Additive: '+<value> 擊退抗性'
+    Multiply: '+<value> 擊退抗性'
+    Compound: 'x<value> 擊退抗性'
+  BaseValue: 0
+
+MOVEMENT_EFFICIENCY:
+  Enabled: false
+  Display: '移動效率'
+  Formatting:
+    Additive: '+<value> 移動效率'
+    Multiply: '+<value> 移動效率'
+    Compound: 'x<value> 移動效率'
+  BaseValue: 0
+
+OXYGEN_BONUS:
+  Enabled: false
+  Display: '氧氣加成'
+  Formatting:
+    Additive: '+<value> 氧氣加成'
+    Multiply: '+<value> 氧氣加成'
+    Compound: 'x<value> 氧氣加成'
+  BaseValue: 0
+
+SAFE_FALL_DISTANCE:
+  Enabled: false
+  Display: '安全落地距離'
+  Formatting:
+    Additive: '+<value> 安全落地距離'
+    Multiply: '+<value> 安全落地距離'
+    Compound: 'x<value> 安全落地距離'
+  BaseValue: 0
+
+SNEAKING_SPEED:
+  Enabled: false
+  Display: '潛行速度'
+  Formatting:
+    Additive: '+<value> 潛行速度'
+    Multiply: '+<value> 潛行速度'
+    Compound: 'x<value> 潛行速度'
+  BaseValue: 0
+
+STEP_HEIGHT:
+  Enabled: false
+  Display: '跨越高度'
+  Formatting:
+    Additive: '+<value> 跨越高度'
+    Multiply: '+<value> 跨越高度'
+    Compound: 'x<value> 跨越高度'
+  BaseValue: 0
+
+WATER_MOVEMENT_EFFICIENCY:
+  Enabled: false
+  Display: '水中移動效率'
+  Formatting:
+    Additive: '+<value> 水中移動效率'
+    Multiply: '+<value> 水中移動效率'
+    Compound: 'x<value> 水中移動效率'
+  BaseValue: 0
+
+################################################################
+#
+# 自訂屬性範例
+#
+################################################################
+
+ARMOR_GENERIC:
+  Enabled: false
+  Type: DAMAGE_MODIFIER
+  Triggers:
+    - DAMAGED
+  ExecutionPoint: PRE
+  Display: '通用護甲'
+  DamageFormula: 'd - v'
+  BaseValue: 0
+  Formatting:
+    Additive: '+<value> 通用護甲'
+    Multiply: '+<value> 通用護甲'
+    Compound: 'x<value> 通用護甲'
+
+ARMOR_BLUNT:
+  Enabled: false
+  Type: DAMAGE_MODIFIER
+  Triggers:
+    - DAMAGED
+  ExecutionPoint: PRE
+  Display: '鈍器護甲'
+  DamageType: BLUNT
+  DamageFormula: 'd - v'
+  BaseValue: 0
+  Formatting:
+    Additive: '+<value> 鈍器護甲'
+    Multiply: '+<value> 鈍器護甲'
+    Compound: 'x<value> 鈍器護甲'
+
+ARMOR_SHARP:
+  Enabled: false
+  Type: DAMAGE_MODIFIER
+  Triggers:
+    - DAMAGED
+  ExecutionPoint: PRE
+  Display: '利刃護甲'
+  DamageType: SHARP
+  DamageFormula: 'd - v'
+  BaseValue: 0
+  Formatting:
+    Additive: '+<value> 利刃護甲'
+    Multiply: '+<value> 利刃護甲'
+    Compound: 'x<value> 利刃護甲'
+
+DAMAGE_BLUNT:
+  Enabled: false
+  Type: DAMAGE_BONUS
+  Priority: 1
+  Triggers:
+    - ATTACK
+  ExecutionPoint: PRE
+  Display: '鈍擊傷害'
+  DamageType: BLUNT
+  BaseValue: 0
+  Formatting:
+    Additive: '+<value> 鈍擊傷害'
+    Multiply: '+<value> 鈍擊傷害'
+    Compound: 'x<value> 鈍擊傷害'
+
+DAMAGE_SHARP:
+  Enabled: false
+  Type: DAMAGE_BONUS
+  Priority: 2
+  Triggers:
+    - ATTACK
+  ExecutionPoint: PRE
+  Display: '銳利傷害'
+  DamageType: SHARP
+  BaseValue: 0
+  Formatting:
+    Additive: '+<value> 銳利傷害'
+    Multiply: '+<value> 銳利傷害'
+    Compound: 'x<value> 銳利傷害'
+
+FIRE_RESISTANCE:
+  Enabled: false
+  Display: '火焰抗性'
+  Formatting:
+    Additive: '+<value> 火焰抗性'
+    Multiply: '+<value> 火焰抗性'
+    Compound: 'x<value> 火焰抗性'
+  Type: DAMAGE_MODIFIER
+  Triggers:
+    - DAMAGED
+  Conditions:
+    - (damageCause FIRE || damageCause FIRE_TICK)
+  ExecutionPoint: PRE
+  DamageFormula: 'd * (1 - v)'
+  MaxValue: 1
+  MinValue: 0
+
+SPEED:
+  Enabled: false
+  AlwaysActive: false
+  Type: STATIC
+  FormulaKey: 'SPD'
+  Formatting:
+    Additive: '+<value> 速度'
+    Multiply: '+<value>% 速度'
+    Compound: 'x<value>% 速度'

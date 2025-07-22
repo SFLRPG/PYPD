@@ -1,0 +1,34 @@
+KingsCrown:
+  Id: GOLDEN_HELMET
+  Display: '&d王者之冠'
+  Lore:
+    - '&6象徵王者的冠冕'
+    - '&6賦予配戴者堅不可摧的力量'
+  Enchantments:
+    - PROTECTION_ENVIRONMENTAL:2
+    - PROTECTION_PROJECTILE:2
+    - PROTECTION_FIRE:2
+    - PROTECTION_EXPLOSIONS:2
+  Hide:
+    - ATTRIBUTES
+    - ENCHANTS
+  Attributes:
+    Head:
+      Health: 10
+      KnockbackResistance: 10
+
+BanditTunic:
+  Id: LEATHER_CHESTPLATE
+  Display: '&a強盜皮甲'
+  Lore:
+    - '&6從一名強盜屍體上奪來的皮甲'
+    - '&6散發著淡淡的血腥味'
+  Options:
+    Color: 255,40,40
+    
+GoldCoin:
+  Id: GOLD_NUGGET
+  Display: '&6金幣'
+  Lore:
+    - '&e古老王國流通的貨幣'
+

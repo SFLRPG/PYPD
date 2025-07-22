@@ -1,0 +1,81 @@
+SkeletonKing:
+  Type: WITHER_SKELETON
+  Display: '&6骷髏王'
+  Health: 1
+  Damage: 10
+  Skills:
+    - speak{m="沒有人能挑戰骷髏王！";cooldown=20} @PlayersInRadius{r=40} ~onCombat 0.2
+    - speak{m="啊哈哈哈！去死吧，<trigger.name>！"} @PlayersInRadius{r=40} ~onPlayerKill
+    - skill{s=SummonSkeletons} @self 0.1
+    - skill{s=SmashAttack} @target 0.2
+    - command{c="eco give <killer.name> 100";asConsole=true} @self ~onDeath
+    - message{m="你獲得了 100 金幣！"} @killer ~onDeath
+  Equipment:
+    - KingsCrown HEAD
+  Drops:
+    - SkeletonKingDrops
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+
+
+SkeletalKnight:
+  Type: WITHER_SKELETON
+  Display: '&a骷髏騎士'
+  Health: 40
+  Damage: 8
+  Equipment:
+    - IRON_HELMET{display="&7騎士頭盔"} HEAD
+    - IRON_CHESTPLATE{display="&7騎士鎧甲"} CHEST
+    - IRON_LEGGINGS{display="&7騎士腿甲"} LEGS
+    - IRON_BOOTS{display="&7騎士靴"} FEET
+    - IRON_SWORD{display="&f生鏽的長劍"} HAND
+    - SHIELD{display="&7破舊的盾牌"} OFFHAND
+  Drops:
+    - GOLD_NUGGET{display="金幣"} 1to2 0.5
+  LevelModifiers:
+    - health 5
+    - damage 0.5
+  Options:
+    MovementSpeed: 0.1
+
+SkeletalMinion:
+  Type: SKELETON
+  Display: '&2骷髏小兵'
+  Health: 10
+  Damage: 2
+  Equipment:
+    - BOW{display="&7生鏽的短弓"} HAND
+  Options:
+    MovementSpeed: 0.1
+
+StaticallyChargedSheep:
+  Type: SHEEP
+  Display: '&a靜電綿羊'
+  Health: 100
+  Damage: 2
+  Options:
+    MovementSpeed: 0.3
+  DamageModifiers:
+    - LIGHTNING 0
+    - FIRE 0.5
+  Skills:
+    - lightning @LivingInRadius{r=10} ~onTimer:100
+
+AngrySludge:
+  Type: SLIME
+  Display: '&a憤怒的污泥'
+  Health: 100
+  Damage: 2
+  Options:
+    Size: 20
+    MovementSpeed: 0.1
+    PreventSlimeSplit: true
+    PreventOtherDrops: true
+    MaxCombatDistance: 30
+    KnockbackResistance: 1
+  Skills:
+    - skill{s=AngrySludgePoison} 0.2
+    - blockmask{material=SLIME_BLOCK;r=1;duration=100} @self ~onTimer:20
