@@ -1,23 +1,31 @@
 name: Control
-modifier:
-  duration:
-    name: Duration
-    default-value: 0
-  timer:
-    name: Timer
-    default-value: 0
-  delay:
-    name: Delay
-    default-value: 0
-  mana:
-    name: Mana
-    default-value: 0
-  stamina:
-    name: Stamina
-    default-value: 0
-  cooldown:
-    name: Cooldown
-    default-value: 0
-  knockback:
-    name: Knockback
-    default-value: 0
+lore:
+- Your target is temporarily slowed for &8{duration} &7seconds.
+- As soon as you left click, it gets
+- pushed back where you are looking at.
+- 'Knockback force: &f{knockback}%'
+- ''
+- '&e{cooldown}s Cooldown'
+- '&9Costs {mana} {mana_name}'
+material: MAGENTA_DYE
+duration:
+  base: 2.0
+  per-level: 1.0
+  #Optional: The decimal format used for this skill parameter.
+  decimal-format: '0.#'
+mana:
+  base: 15.0
+  per-level: 1.5
+stamina:
+  base: 2.0
+  per-level: 1.0
+  max: 0.0
+  min: 0.0
+cooldown:
+  base: 18.0
+  per-level: -0.3
+  max: 20.0
+  min: 10.0
+knockback:
+  base: 30.0
+  per-level: 3.0

@@ -1,26 +1,43 @@
 name: Chicken Wraith
-modifier:
-  duration:
-    name: Duration
-    default-value: 2.5
-  damage:
-    name: Damage
-    default-value: 2.0
-  mana:
-    name: Mana
-    default-value: 0.0
-  stamina:
-    name: Stamina
-    default-value: 0.0
-  cooldown:
-    name: Cooldown
-    default-value: 10.0
-  timer:
-    name: Timer
-    default-value: 0.0
-  inaccuracy:
-    name: Inaccuracy
-    default-value: 10.0
-  force:
-    name: Force
-    default-value: 1.0
+lore:
+- Unleash chaos by using
+- this rapid egg shooter
+- ''
+- '&e{cooldown}s Cooldown'
+- '&9Costs {mana} {mana_name}'
+material: EGG
+duration:
+  base: 4
+  per-level: 1
+  #Optional: The decimal format used for this skill parameter.
+  decimal-format: '0.#'
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+damage:
+  base: 1
+  per-level: 1.5
+delay:
+  base: 2
+  per-level: 1
+  min: 0
+  max: 0
+mana:
+  base: 8
+  per-level: 1
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 2
+  per-level: 1
+inaccuracy:
+  base: 4
+  per-level: -0.5
+force:
+  base: 4
+  per-level: 1

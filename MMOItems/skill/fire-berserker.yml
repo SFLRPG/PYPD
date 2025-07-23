@@ -1,20 +1,19 @@
 name: Fire Berserker
-modifier:
-  timer:
-    name: Timer
-    default-value: 0
-  delay:
-    name: Delay
-    default-value: 0
-  mana:
-    name: Mana
-    default-value: 0
-  stamina:
-    name: Stamina
-    default-value: 0
-  extra:
-    name: Extra
-    default-value: 0
-  cooldown:
-    name: Cooldown
-    default-value: 0
+lore:
+- You deal &c{extra}% &7more damage when on fire.
+material: FLINT_AND_STEEL
+mana:
+  base: 2.0
+  per-level: 1.0
+  max: 0.0
+  min: 0.0
+  #Optional: The decimal format used for this skill parameter.
+  decimal-format: '0.#'
+stamina:
+  base: 2.0
+  per-level: 1.0
+  max: 0.0
+  min: 0.0
+extra:
+  base: 10.0
+  per-level: 5.0
